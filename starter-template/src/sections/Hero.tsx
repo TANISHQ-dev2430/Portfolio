@@ -9,7 +9,7 @@ import SparkleIcon from "@/assets/icons/sparkle.svg";
 export const HeroSection = () => {
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+      <div className="absolute inset-0 pointer-events-none [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
       <div className="absolute inset-0 -z-30 opacity-5"
       style={{ backgroundImage: `url(${grainImage.src})` }}></div>
       <div className="hero-ring"></div>
@@ -70,8 +70,8 @@ export const HeroSection = () => {
             <ArrowDown className="w-4 h-4"/>
           </button>
           <button className="inline-flex items-center gap-2 border border-white text-gray-900 bg-white px-6 h-12 rounded-xl">
-            <span>👋</span>
-            <span className="font-semibold">Let's Connect</span>
+            <span></span>
+            <span className="font-semibold">Resume</span>
           </button>
         </div>
       </div>
