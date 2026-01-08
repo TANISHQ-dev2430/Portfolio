@@ -6,7 +6,7 @@ export const ContactSection = () => {
   const url = "https://www.linkedin.com/in/tanishq-kumar-894814211/";
 
   return (
-    <div className="py-16 pt-12 lg:pt-20 relative z-40">
+    <div id="contact" className="py-16 pt-12 lg:pt-20 relative z-40">
       <div className="container">
         <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative">
 

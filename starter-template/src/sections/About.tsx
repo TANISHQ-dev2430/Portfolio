@@ -68,7 +68,8 @@ const hobbies = [
     top: "45%",
   },
 ];
-const Toolboxitems = [
+
+const toolboxItemsData = [  // Renamed from Toolboxitems to toolboxItemsData
   {
     tittle: "JavaScript",
     iconType: JavaScriptIcon,
@@ -122,11 +123,13 @@ const Toolboxitems = [
     iconType: PythonIcon,
   },
 ];
+
 export const AboutSection = () => {
   return (
-    <div className="py-20 lg:py-28">
+    <div id="about" className="py-20 lg:py-28">
       <div className="container">
-        <SectionHeader
+        <SectionHeader 
+          
           eyebrow="About Me"
           title="A Glimpse Into My World"
           description="Learn more about who I am,What I do, and what drives me."
@@ -150,35 +153,35 @@ export const AboutSection = () => {
                 className=""
               />
               <ToolboxItems 
-              toolboxitems={Toolboxitems} 
-              className="" 
-              itemsWrapperClassName="animate-move-left [animation-duration:30s]"
+                toolboxitems={toolboxItemsData}  
+                className="" 
+                itemsWrapperClassName="animate-move-left [animation-duration:30s]"
               />
               <ToolboxItems
-                toolboxitems={Toolboxitems}
+                toolboxitems={toolboxItemsData}
                 className="mt-6"
                 itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:30s]"
               />
             </Card>
           </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3 z-10">
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
                 tittle="Beyond the Code"
                 description="Explore my hobbies and interests beyond the code"
                 className="px-6 py-6"
               />
-              <div className="relative flex-1">
+              <div className="relative flex-1 z-20">
                 {hobbies.map((hobby) => (
                   <motion.div
                     key={hobby.title}
-                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute cursor-grab active:cursor-grabbing"
                     style={{
                       left: hobby.left,
                       top: hobby.top,
-                      touchAction: "none",
                     }}
                     drag
+                    dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                   >
                     <span className="font-medium text-gray-950">
                       {hobby.title}
