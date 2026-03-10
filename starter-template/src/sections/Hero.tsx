@@ -105,7 +105,7 @@ export const HeroSection = () => {
           </a>
 
           <a
-            href="/TANISHQ_RESUME__updated.pdf"
+            href="/TANISHQ_RESUME__Copy_ (4).pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl hover:scale-105 transition-transform"
